@@ -8,7 +8,7 @@
       "name": "aws",
       "runtime": "nodejs16.x",
       "stage": "dev",
-      "region": "us-east-1",
+      "region": "sa-east-1",
       "memorySize": 128,
       "timeout": 3,
       "versionFunctions": true,
@@ -175,7 +175,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/sls-mobile-api/dev/1663710614004-2022-09-20T21:50:14.004Z/sls-mobile-api.zip"
+                "S3Key": "serverless/sls-mobile-api/dev/1663711388592-2022-09-20T22:03:08.592Z/sls-mobile-api.zip"
               },
               "Handler": "index.handler",
               "Runtime": "nodejs16.x",
@@ -192,25 +192,25 @@
               "Environment": {
                 "Variables": {
                   "AWS_LAMBDA_EXEC_WRAPPER": "/opt/otel-extension-internal-node/exec-wrapper.sh",
-                  "SLS_EXTENSION": "{\"ingestToken\":\"01431605-0293-4329-9e67-cb1ebb048433\",\"orgId\":\"KqlynbGl66ptlCDjXQ\",\"namespace\":\"sls-mobile-api\",\"environment\":\"dev\"}"
+                  "SLS_EXTENSION": "{\"ingestToken\":\"912706d3-b542-4147-95ee-c679cf88b47c\",\"orgId\":\"KqlynbGl66ptlCDjXQ\",\"namespace\":\"sls-mobile-api\",\"environment\":\"dev\"}"
                 }
               },
               "Layers": [
-                "arn:aws:lambda:us-east-1:177335420605:layer:sls-otel-extension-node-v0-5-2:1"
+                "arn:aws:lambda:sa-east-1:177335420605:layer:sls-otel-extension-node-v0-5-2:1"
               ]
             },
             "DependsOn": [
               "IndexLogGroup"
             ]
           },
-          "IndexLambdaVersion2E9kDIhKC73flD8IiVSaGRVCZmQFTBzt1qnLxYEQ": {
+          "IndexLambdaVersionSejV6zWzRPm7sy3jjZw1Tf8b45Ah5FVjyYqjwbGw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "IndexLambdaFunction"
               },
-              "CodeSha256": "C7GFjjmF3FvEkCZkoinEBhjlqMfErMaTwQ8omE+8l8A=",
+              "CodeSha256": "sbMaC4JKd2xKINUVkyfvn7aJH47BZRGyiQdT3DywNuU=",
               "Description": "Lambda Mobile API"
             }
           },
@@ -287,7 +287,7 @@
               "IndexLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1663710611095": {
+          "ApiGatewayDeployment1663711385501": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -349,7 +349,7 @@
           "IndexLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "IndexLambdaVersion2E9kDIhKC73flD8IiVSaGRVCZmQFTBzt1qnLxYEQ"
+              "Ref": "IndexLambdaVersionSejV6zWzRPm7sy3jjZw1Tf8b45Ah5FVjyYqjwbGw"
             },
             "Export": {
               "Name": "sls-sls-mobile-api-dev-IndexLambdaFunctionQualifiedArn"
@@ -487,7 +487,7 @@
         "timeout": 3,
         "runtime": "nodejs16.x",
         "vpc": {},
-        "versionLogicalId": "IndexLambdaVersion2E9kDIhKC73flD8IiVSaGRVCZmQFTBzt1qnLxYEQ"
+        "versionLogicalId": "IndexLambdaVersionSejV6zWzRPm7sy3jjZw1Tf8b45Ah5FVjyYqjwbGw"
       }
     },
     "configValidationMode": "warn",
@@ -510,16 +510,16 @@
     "artifact": "/var/www/html/mobile-api/.serverless/sls-mobile-api.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/sls-mobile-api/dev/1663710614004-2022-09-20T21:50:14.004Z",
+    "artifactDirectoryName": "serverless/sls-mobile-api/dev/1663711388592-2022-09-20T22:03:08.592Z",
     "artifact": "sls-mobile-api.zip"
   },
   "console": {
     "schemaVersion": "2",
-    "otelIngestionToken": "01431605-0293-4329-9e67-cb1ebb048433",
+    "otelIngestionToken": "912706d3-b542-4147-95ee-c679cf88b47c",
     "layerVersion": "0.5.2",
     "service": "sls-mobile-api",
     "stage": "dev",
-    "region": "us-east-1",
+    "region": "sa-east-1",
     "orgId": "KqlynbGl66ptlCDjXQ"
   }
 }
