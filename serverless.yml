@@ -1,3 +1,5 @@
+org: raffalcao
+console: true
 service: sls-mobile-api
 
 provider:
@@ -12,7 +14,8 @@ functions:
   index:
     handler: index.handler
     description: Lambda Mobile API
-    runtime: nodejs16.x
-    memorySize: 128
-    timeout: 3
     events:
+      - http:
+          path: /index
+          method: post
+      
